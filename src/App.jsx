@@ -37,9 +37,10 @@ function App() {
   
   return (
     <>
-      <div className="w-full h-screen bg-gray-900 flex justify-center">
-        <div className="w-full max-w-xl h-[200px] mt-9 rounded-xl bg-gray-600">
-          <div className="w-full flex align-center my-5 justify-center">
+      <div className="w-full h-screen bg-gray-900 flex flex-col justify-center items-center">
+        <h1 className="capitalize text-white text-4xl">password generator</h1>
+        <div className="w-full max-w-xl h-[200px] mt-9 rounded-xl bg-gray-600 flex flex-col justify-center gap-5 items-center">
+          <div className="w-full flex align-center justify-center">
             <input
               type="text"
               className="bg-white rounded-l-2xl pl-3 border outline-none focus:ring-0 focus:border-transparent w-[400px]"
@@ -47,7 +48,7 @@ function App() {
               value={password}
               ref={inputRef}
             />
-            <button className="bg-blue-600 rounded-r-2xl px-4 py-3 text-white capitalize text-lg hover:bg-blue-900" onClick={copyToClip}>
+            <button className="bg-blue-600 rounded-r-2xl px-4 py-3 text-white capitalize text-lg hover:bg-blue-900 font-bold" onClick={copyToClip}>
               copy
             </button>
           </div>
