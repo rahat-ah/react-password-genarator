@@ -37,7 +37,7 @@ function App() {
   
   return (
     <>
-      <div className="w-full h-screen bg-gray-900 flex flex-col justify-center items-center">
+      <div className="w-full h-screen bg-[url('https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center">
         <h1 className="capitalize text-white text-4xl">password generator</h1>
         <div className="w-full max-w-xl h-[200px] mt-9 rounded-xl bg-gray-600 flex flex-col justify-center gap-5 items-center">
           <div className="w-full flex align-center justify-center">
@@ -53,30 +53,36 @@ function App() {
             </button>
           </div>
           <div className="text-yellow-300 flex justify-center w-full">
-            <div className="flex align-center justify-around">
-              <input
-                type="range"
-                id="rangeInput"
-                min="4"
-                max="30"
-                value={length}
-                onChange={(e) => setLength(e.target.value)}
-              />
-              <label htmlFor="rangeInput">Password Length({length})</label>
-              <input
-                type="checkbox"
-                defaultChecked={numAllow}
-                onChange={() => setNumAllow((prev)=>!prev)}
-                id="numRadioBtn"
-              />
-              <label htmlFor="numRadioBtn">Numbers</label>
-              <input 
-                type="checkbox"
-                id="specialCharRadioBtn"
-                defaultChecked={charAllow}
-                onChange={() => setCharAllow((prev)=>!prev)} 
-              />
-              <label htmlFor="specialCharRadioBtn">Characters</label>
+            <div className="flex items-center justify-around gap-3 ">
+              <div className="flex gap-1">
+                <input
+                  type="range"
+                  id="rangeInput"
+                  min="4"
+                  max="30"
+                  value={length}
+                  onChange={(e) => setLength(e.target.value)}
+                />
+                <label htmlFor="rangeInput">Password Length({length})</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  defaultChecked={numAllow}
+                  onChange={() => setNumAllow((prev)=>!prev)}
+                  id="numRadioBtn"
+                />
+                <label htmlFor="numRadioBtn">Numbers</label>
+              </div>
+              <div className="flex gap-1">
+                <input 
+                  type="checkbox"
+                  id="specialCharRadioBtn"
+                  defaultChecked={charAllow}
+                  onChange={() => setCharAllow((prev)=>!prev)} 
+                />
+                <label htmlFor="specialCharRadioBtn">Characters</label>
+              </div>
             </div>
           </div>
         </div>
