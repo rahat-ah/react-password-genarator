@@ -43,7 +43,7 @@ function App() {
           <div className="w-full flex align-center justify-center">
             <input
               type="text"
-              className="bg-white rounded-l-2xl pl-3 border outline-none focus:ring-0 focus:border-transparent w-[400px]"
+              className="bg-white text-green-700 font-semibold rounded-l-2xl pl-3 border outline-none focus:ring-0 focus:border-transparent w-[400px]"
               readOnly
               value={password}
               ref={inputRef}
